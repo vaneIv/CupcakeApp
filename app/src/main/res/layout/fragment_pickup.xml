@@ -5,6 +5,7 @@
     tools:context=".PickupFragment">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.cupcakeapp.model.OrderViewModel" />
@@ -31,26 +32,34 @@
                     android:id="@+id/radio_btn_option0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thursday" />
+                    android:checked="@{viewModel.date.equals(viewModel.dateOptions[0])}"
+                    android:onClick="@{() -> viewModel.setDate(viewModel.dateOptions[0])}"
+                    android:text="@{viewModel.dateOptions[0]}" />
 
 
                 <RadioButton
                     android:id="@+id/radio_btn_option1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Friday" />
+                    android:checked="@{viewModel.date.equals(viewModel.dateOptions[1])}"
+                    android:onClick="@{() -> viewModel.setDate(viewModel.dateOptions[1])}"
+                    tools:text="@{viewModel.dateOptions[1]}" />
 
                 <RadioButton
                     android:id="@+id/radio_btn_option2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Saturday" />
+                    android:checked="@{viewModel.date.equals(viewModel.dateOptions[2])}"
+                    android:onClick="@{() -> viewModel.setDate(viewModel.dateOptions[2])}"
+                    tools:text="@{viewModel.dateOptions[2]}" />
 
                 <RadioButton
                     android:id="@+id/radio_btn_option3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Sunday" />
+                    android:checked="@{viewModel.date.equals(viewModel.dateOptions[3])}"
+                    android:onClick="@{() -> viewModel.setDate(viewModel.dateOptions[3])}"
+                    tools:text="@{viewModel.dateOptions[3]}" />
             </RadioGroup>
 
             <View
