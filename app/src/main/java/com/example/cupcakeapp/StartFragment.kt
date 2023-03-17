@@ -29,11 +29,7 @@ class StartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.apply {
-            btnOrderOneCupcake.setOnClickListener { orderCupcake(1) }
-            btnOrderSixCupcakes.setOnClickListener { orderCupcake(6) }
-            btnOrderTwelveCupcakes.setOnClickListener { orderCupcake(12) }
-        }
+        binding?.startFragment = this
     }
 
     fun orderCupcake(quantity: Int) {

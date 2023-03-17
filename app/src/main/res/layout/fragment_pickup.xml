@@ -9,6 +9,10 @@
         <variable
             name="viewModel"
             type="com.example.cupcakeapp.model.OrderViewModel" />
+
+        <variable
+            name="pickupFragment"
+            type="com.example.cupcakeapp.PickupFragment" />
     </data>
 
     <ScrollView
@@ -88,6 +92,7 @@
                 android:id="@+id/btn_next"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> pickupFragment.goToNextScreen()}"
                 android:text="@string/next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

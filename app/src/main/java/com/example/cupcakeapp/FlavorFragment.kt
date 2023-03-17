@@ -40,7 +40,7 @@ class FlavorFragment : Fragment() {
         binding?.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            btnNext.setOnClickListener { goToNextScreen() }
+            flavorFragment = this@FlavorFragment
         }
     }
 
