@@ -6,9 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.example.cupcakeapp.databinding.FragmentSummaryBinding
+import com.example.cupcakeapp.model.OrderViewModel
 
 class SummaryFragment : Fragment() {
+
+    private val sharedViewModel: OrderViewModel by activityViewModels()
 
     private var binding: FragmentSummaryBinding? = null
 
