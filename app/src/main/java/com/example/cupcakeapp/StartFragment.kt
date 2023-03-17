@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.cupcakeapp.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
@@ -33,7 +33,7 @@ class StartFragment : Fragment() {
     }
 
     fun orderCupcake(quantity: Int) {
-        Toast.makeText(activity, "Ordered $quantity cupcake(s)", Toast.LENGTH_SHORT).show()
+        findNavController().navigate(R.id.action_startFragment_to_flavorFragment)
     }
 
     override fun onDestroyView() {
